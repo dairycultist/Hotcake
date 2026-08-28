@@ -10,6 +10,12 @@ return {
                     "is destroyed, sets money to {C:money}$0{}"
                 }
             },
+            j_hotcake_dancer = {
+                name = "Dancer",
+                text = {
+                    "Scored {C:attention}Queens{} earn {C:money}$#1#{}"
+                }
+            },
             j_hotcake_movie_theater = {
                 name = "Movie Theater",
                 text = {
