@@ -8,9 +8,6 @@ I stole (aka learned from) the code from [NeatoJokers](https://github.com/neatoq
 
 ## Planned
 
-**Neanderthal**
-Spade flushes level up flush by 1
-
 **Artificer**
 When a joker is added, 1 in 4 chance to apply negative to a random joker
 

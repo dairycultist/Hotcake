@@ -10,6 +10,14 @@ return {
                     "is destroyed, sets money to {C:money}$0{}"
                 }
             },
+            j_hotcake_neanderthal = {
+                name = "Neanderthal",
+                text = {
+                    "Played hands that contain a {C:attention}Flush{}",
+                    "and a scoring {C:attention}Spade{} level up",
+                    "{C:attention}Flush{} by {C:attention}1{}"
+                }
+            },
             j_hotcake_vanity = {
                 name = "Vanity",
                 text = {

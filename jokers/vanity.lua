@@ -70,9 +70,7 @@ SMODS.Joker {
                 end
             end
 
-            return {
-                message = "recalculating"
-            }
+            -- return { message = "recalculating" }
         end
 
         -- calculating retriggers for a played card
