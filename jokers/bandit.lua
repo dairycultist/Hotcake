@@ -1,14 +1,19 @@
 SMODS.Joker {
     key = "bandit",
+
+    atlas = "jokers",
+    pos = { x = 3, y = 0 },
+
     unlocked = true,
     discovered = true,
+
+    rarity = 1,
+    cost = 6,
+
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
-    rarity = 1,
-    atlas = "jokers",
-    pos = { x = 3, y = 0 },
-    cost = 6,
+
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
@@ -17,6 +22,7 @@ SMODS.Joker {
             }
         }
     end,
+
     calculate = function(self, card, context)
 
         if context.end_of_round and not context.repetition and not context.game_over and not context.blueprint and not context.individual and G.GAME.dollars >= 8 then
