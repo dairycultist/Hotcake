@@ -1,0 +1,17 @@
+{
+	"id": "hotcake",
+	"name": "Hotcake",
+	"display_name": "Hotcake",
+	"author": [ "dairycultist" ],
+	"description": "I like caked up hotties. Find me on github",
+	"prefix": "hotcake",
+	"main_file": "hotcake.lua",
+	"priority": 0,
+	"badge_colour": "ff4567",
+	"badge_text_colour": "FFFFFF",
+	"version": "1.0.0",
+	"dependencies": [
+		"Steamodded (>=1.0.0~ALPHA-1428c)"
+	],
+    "conflicts": []
+}
