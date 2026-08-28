@@ -20,3 +20,6 @@ if context.card and context.card.ability.set == "Joker" then
 **Gourmand**
 When a food joker is sold, +x0.5 Mult.
 (Currently x1.0 Mult)
+
+**Dancer** (Common)
+Scored Queens earn $5

@@ -18,6 +18,7 @@ SMODS.Joker {
 
         if context.joker_main then
 
+            -- iterate over all scoring cards to find a spade
             local has_scoring_spade = false
 
             for _, scoring_card in ipairs(context.scoring_hand) do
@@ -27,6 +28,7 @@ SMODS.Joker {
                 end
             end
 
+            -- if there is a scoring spade, and the hand is a flush, upgrade flushes
             if (has_scoring_spade) and context.poker_hands["Flush"] and next(context.poker_hands["Flush"]) then
 
                 SMODS.upgrade_poker_hands({ hands = "Flush", from = card })

@@ -18,7 +18,7 @@ SMODS.Joker {
 
         if context.setting_blind and G.GAME.blind and (G.GAME.blind.boss or G.GAME.blind.showdown) then
 
-            local snack_joker = Card(
+            local joker_to_emplace = Card(
                 G.jokers.T.x,
                 G.jokers.T.y,
                 G.CARD_W,
@@ -27,9 +27,9 @@ SMODS.Joker {
                 G.P_CENTERS[SMODS.pseudorandom_probability(card, "unique_key_for_hotcake", 1, 2, "unique_key_for_hotcake", true) and "j_popcorn" or "j_diet_cola"]
             )
 
-            snack_joker:set_edition("e_negative", true, true)
+            joker_to_emplace:set_edition("e_negative", true, true)
 
-            G.jokers:emplace(snack_joker)
+            G.jokers:emplace(joker_to_emplace)
 
             return {
                 message = localize("k_movie_theater_proc")
