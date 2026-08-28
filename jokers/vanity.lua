@@ -22,6 +22,23 @@ SMODS.Joker {
         }
     end,
 
+    add_to_deck = function(self, card, from_debuff)
+        
+        for _, playing_card in ipairs(G.playing_cards) do
+
+            if playing_card and not playing_card.REMOVED then
+
+                if playing_card:is_face() then
+                    SMODS.debuff_card(playing_card, false, "debuff_from_hotcake")
+                else
+                    SMODS.debuff_card(playing_card, true, "debuff_from_hotcake")
+                end
+
+                SMODS.recalc_debuff(playing_card)
+            end
+        end
+    end,
+
     remove_from_deck = function(self, card, from_debuff)
         
         for _, playing_card in ipairs(G.playing_cards) do
@@ -29,16 +46,15 @@ SMODS.Joker {
             if playing_card and not playing_card.REMOVED then
 
                 SMODS.debuff_card(playing_card, false, "debuff_from_hotcake")
+                SMODS.recalc_debuff(playing_card)
             end
         end
-
-        SMODS.recalc_debuff(playing_card)
     end,
 
     calculate = function(self, card, context)
 
         -- recalculate debuffs when cards (playing cards, jokers, technically consumables too but not really necessary) are added/removed
-        if SMODS.can_calculate(card) and not context.blueprint and (context.add_to_deck or context.card_added or context.remove_playing_cards or context.selling_card or context.cards_destroyed) then
+        if context.card_added or context.add_to_deck or context.buying_card or context.remove_playing_cards or context.selling_card or context.cards_destroyed then
             
             for _, playing_card in ipairs(G.playing_cards) do
 
@@ -49,20 +65,24 @@ SMODS.Joker {
                     else
                         SMODS.debuff_card(playing_card, true, "debuff_from_hotcake")
                     end
+
+                    SMODS.recalc_debuff(playing_card)
                 end
             end
 
-            SMODS.recalc_debuff(playing_card)
+            return {
+                message = "recalculating"
+            }
         end
 
         -- calculating retriggers for a played card
-        if context.cardarea == G.play and context.repetition then
+        if context.cardarea == G.play and context.repetition and not context.repetition_only and not context.blueprint and context.other_card:is_face() then
             
-            if not context.blueprint and card:is_face() then
-                return 4
-            else
-                return 0
-            end
+            return {
+                message = localize("k_again_ex"),
+                repetitions = 4,
+                card = card
+            }
         end
 
         return {}

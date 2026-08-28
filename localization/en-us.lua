@@ -15,7 +15,8 @@ return {
                 text = {
                     "Retrigger {C:attention}face{} cards {C:attention}#1#{} additional",
                     "times, {C:attention}number{} cards and {C:attention}Aces{} are",
-                    "debuffed"
+                    "debuffed",
+                    "{C:inactive}(Interactions with Pareidolia are bugged right now){}"
                 }
             }
         }
