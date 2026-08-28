@@ -9,6 +9,14 @@ return {
                     "have more than {C:money}$#2#{}, this card",
                     "is destroyed, sets money to {C:money}$0{}"
                 }
+            },
+            j_hotcake_vanity = {
+                name = "Vanity",
+                text = {
+                    "Retrigger {C:attention}face{} cards {C:attention}#1#{} additional",
+                    "times, {C:attention}number{} cards and {C:attention}Aces{} are",
+                    "debuffed"
+                }
             }
         }
     },
