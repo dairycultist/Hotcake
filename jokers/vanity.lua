@@ -2,7 +2,7 @@ SMODS.Joker {
     key = "vanity",
 
     atlas = "jokers",
-    pos = { x = 2, y = 0 },
+    pos = { x = 0, y = 0 },
 
     unlocked = true,
     discovered = true,
