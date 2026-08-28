@@ -10,6 +10,13 @@ return {
                     "is destroyed, sets money to {C:money}$0{}"
                 }
             },
+            j_hotcake_movie_theater = {
+                name = "Movie Theater",
+                text = {
+                    "When {C:attention}Boss Blind{} is selected,",
+                    "create a {C:negative}Negative{} {C:attention}Popcorn{} or {C:attention}Diet Cola{}"
+                }
+            },
             j_hotcake_neanderthal = {
                 name = "Neanderthal",
                 text = {
@@ -31,7 +38,8 @@ return {
     },
     misc = {
         dictionary = {
-            k_bandit_proc = "Swindled!"
+            k_bandit_proc = "Swindled!",
+            k_movie_theater_proc = "Action!"
         }
     }
 }

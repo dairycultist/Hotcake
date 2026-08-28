@@ -6,6 +6,8 @@ Requires [steamodded](https://github.com/Steamodded/smods/wiki) (which itself re
 
 I stole (aka learned from) the code from [NeatoJokers](https://github.com/neatoqueen/NeatoJokers)
 
+reference: https://docs.smods.dev/API Documentation/Utility/
+
 ## Planned
 
 **Artificer**
@@ -18,6 +20,3 @@ if context.card and context.card.ability.set == "Joker" then
 **Gourmand**
 When a food joker is sold, +x0.5 Mult.
 (Currently x1.0 Mult)
-
-**Movie Theatre**
-When {}Boss Blind{} is selected, create a {C:negative}Negative{} {}Popcorn{} or {}Diet Cola{}
