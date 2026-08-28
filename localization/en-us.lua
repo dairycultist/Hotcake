@@ -1,17 +1,20 @@
 return {
     descriptions = {
         Joker = {
-            j_hotcake_testjoker = {
-                name = "Test Joker",
+            j_hotcake_bandit = {
+                name = "Bandit",
                 text = {
-                    "Gives {C:money}$#1#{} at the end of round"
+                    "{C:mult}+#1#{} Mult",
+                    "At the end of round, if you",
+                    "have more than {C:money}$#2#{}, this card",
+                    "is destroyed, sets money to {C:money}$0{}"
                 }
             }
         }
     },
     misc = {
         dictionary = {
-            k_test_message = "Yay!"
+            k_bandit_proc = "Swindled!"
         }
     }
 }

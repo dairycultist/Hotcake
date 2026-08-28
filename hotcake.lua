@@ -29,8 +29,6 @@ function neato_roll_random(obj, seed, numerator, denominator)
 end
 
 -- load all individual jokers
-local subdir = "cards"
-local cards = NFS.getDirectoryItems(SMODS.current_mod.path .. subdir)
-for _, filename in pairs(cards) do
-    assert(SMODS.load_file(subdir .. "/" .. filename))()
+for _, filename in pairs(NFS.getDirectoryItems(SMODS.current_mod.path .. "jokers")) do
+    assert(SMODS.load_file("jokers/" .. filename))()
 end

@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = "testjoker",
+    key = "bandit",
     unlocked = true,
     discovered = true,
     blueprint_compat = false,
@@ -12,17 +12,25 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                10
+                20, -- mult
+                8   -- swindling threshold
             }
         }
     end,
     calculate = function(self, card, context)
-        if context.end_of_round and not context.repetition and not context.game_over and not context.blueprint and not context.individual then
+
+        if context.end_of_round and not context.repetition and not context.game_over and not context.blueprint and not context.individual and G.GAME.dollars >= 8 then
+
+            G.GAME.dollars = 0
 
             return {
-                message = localize("k_test_message"),
-                dollars = 10
+                mult = 20,
+                message = localize("k_bandit_proc")
             }
         end
+
+        return {
+            mult = 20
+        }
     end
 }
